@@ -19,8 +19,9 @@ cask "simwatchdog" do
   # Ad-hoc signed, not notarized: clear quarantine so it opens without a Gatekeeper warning.
   postflight_steps do
     run "/usr/bin/xattr",
-        args:         ["-dr", "com.apple.quarantine", "SimWatchdog.app"],
-        must_succeed: false
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/SimWatchdog.app"],
+        writable_paths: ["SimWatchdog.app"],
+        writable_base:  :appdir
   end
 
   zap trash: [
