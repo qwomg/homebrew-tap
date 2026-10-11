@@ -1,6 +1,6 @@
 cask "simwatchdog" do
-  version "1.1.0"
-  sha256 "50cfb737099a4f77f9aeb2713ac23a3d7362defb11cba3e6ad7abc71fe73e10d"
+  version "1.2.0"
+  sha256 "7ebc056e8f4d00632c334a412b1cd2cb94feb4e9e0bc8376212cadaf18404f72"
 
   url "https://github.com/qwomg/SimWatchdog/releases/download/v#{version}/SimWatchdog.zip"
   name "SimWatchdog"
